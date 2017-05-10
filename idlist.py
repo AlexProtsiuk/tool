@@ -10,4 +10,8 @@ class Reader:
         for line in param.readlines():
             line = line.strip('\n')
             check.append(line)
+            if check[0] == 'akt':  # preparing check-list for Akt201 class
+                check.remove('akt')
+            else:  # preparing check-list for ostatki
+                pass
         return check
